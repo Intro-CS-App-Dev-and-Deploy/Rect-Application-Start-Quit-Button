@@ -1,6 +1,6 @@
 //Global Variables
 int buttonX, buttonY, buttonWidth, buttonHeight;
-color buttonColour, yellow, purple;
+color buttonColour, yellow, purple, resetWhite=#FFFFFF;
 
 void setup() {
   size(400, 300);
@@ -14,14 +14,16 @@ void setup() {
 }//End setup
 
 void draw() {
-
-  if (mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4) { //Button Hoverover
+  //background(resetWhite);
+  //println(mouseX, mouseY);
+  if (mouseX>buttonX && mouseX<buttonX+buttonWidth && mouseY>buttonY && mouseY<buttonY+buttonHeight) { //Button Hoverover
     buttonColour = yellow; //Hoverover
   } else {
     buttonColour = purple;
   }// End IF
   fill(buttonColour); //Purple all the time, Yellow with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(resetWhite);
 }//End draw
 
 void keyPressed() {
@@ -32,7 +34,7 @@ void keyPressed() {
 }//End keypressed
 
 void mousePressed() {
-  if ( mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4 ) {
+  if ( mouseX>buttonX && mouseX<buttonX+buttonWidth && mouseY>buttonY && mouseY<buttonY+buttonHeight ) {
     exit();
   }//End IF, using mouseX & mouseY
 }//End mousePressed

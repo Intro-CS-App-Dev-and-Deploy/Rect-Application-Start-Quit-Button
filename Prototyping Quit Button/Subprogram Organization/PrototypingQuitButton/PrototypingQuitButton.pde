@@ -10,6 +10,7 @@ void setup() {
 //
 void draw()
 {
+  displayDraw();
   quitButtonDraw();
   //
 }//End draw

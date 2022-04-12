@@ -18,10 +18,10 @@ void setup() {
   //
   //Population
   //Note: variables similar to Face Rect() on Measles
-  int smallerDisplayDimension = appHeight;
-  int canvasCenter = smallerDisplayDimension*1/2; //thinking experiment
-  quitButtonX = (appWidth*1/2) - appWidth*1/4; //1/4 on one-half, 1/4 on other half
-  quitButtonY = canvasCenter - appHeight*1/4;
+  int centerX = appWidth*1/2;
+  int centerY = appHeight*1/2;
+  quitButtonX = centerX - appWidth*1/4; //1/4 on one-half, 1/4 on other half
+  quitButtonY = centerY - appHeight*1/4;
   quitButtonWidth = appWidth*1/2;
   quitButtonHeight = appHeight*1/2;
 }//End setup
@@ -40,9 +40,13 @@ void draw()
     buttonColour = purple;
   }//End Hover-Over Effect
   //
+  //Alternate verification that mouseX&Y is on the button
+  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t Look at the middle value");
+  println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t Look at the middle value");
+  //
   fill(buttonColour);
   rect ( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight );
-  fill(resetWhite);
+  fill(resetWhite); //Not night mode compatible, must change
 }//End draw
 //
 void keyPressed()
@@ -52,7 +56,9 @@ void keyPressed()
   //
 }//End keyPressed
 //
-void mousePressed() {
+void mousePressed()
+{
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
 }//End mousePressed
 //
 //End Main Program or Driver

@@ -75,7 +75,6 @@ Advanced Applications
 
 Introduce Modular
 
-OS Start Button, Mouse Click into Window
-
+See lessons folder and numerical organization
 
 ---

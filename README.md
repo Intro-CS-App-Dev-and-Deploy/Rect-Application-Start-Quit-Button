@@ -88,12 +88,14 @@ Algorithms Explored
 - Quit Keyboard prototyping and shortcut
 - Hover over
 
-Rect
+Rect - 04
 - layout from middle of the screen (or corner), better layout practice from middle
 - local variables are garbage collected after block of code run
+- Bug: pressing the mouse continues to println which should be locked out with a single-line-IF
 
 Button Creation
 - mouseX & MouseY (see println & middle values)
+- println's must demosntrate logical rectangle before hover-over and mouseClick
 - using equalities to create logical rectangle (mimics Google's previous programming of circle-display and rectangle-hover-over & rectangle-click)
 
 Subprogram organization

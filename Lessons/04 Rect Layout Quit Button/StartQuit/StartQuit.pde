@@ -1,42 +1,43 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
-int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup()
 {
-  //Display & ALgorithms not considered yet
-  size (400, 300);
+  //Display & Orientation Algorithms not consider yet
+  size(400, 300); //Landscape
   //fullScreen(); //displayWidth, displayHeight
   appWidth = width;
   appHeight = height;
   //
   //Population
-  quitButtonX = ;
-  quitButtonY = ;
-  quitButtonWidth = ;
-  quitButtonHeight = ;
+  float centerX = appWidth * 1/2;
+  float centerY = appHeight * 1/2;
+  quitButtonX = centerX - ( appWidth * 1/4 );
+  quitButtonY = centerY - ( appHeight * 1/4 );
+  quitButtonWidth = appWidth * 1/2; //could be centerX, but that is a point
+  quitButtonHeight = appHeight * 1/2; //same comment as centerX, point not line
 } //End setup
 //
-void draw()
+void draw ()
 {
-  if ( noNowReallyStart==true ) { //Actual start IF
+  if ( noNowReallyStart==true ) {
     background(0); //Night Mode not considered yet
-    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button
-  } //End IF-STart
-  //
+    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button with Hoverover
+  }
 } //End draw
 //
-void keyPressed()
+void keyPressed ()
 {
+  //Post-OS Level Start Button
+  if ( key==' ' && start==true) noNowReallyStart = true;
   //
-  if ( key==' ' && start==true ) noNowReallyStart = true;
+  //Prototype Key Board Quit Button OR Shortcut
+  if ( key=='Q' || key=='q') exit() ;
+  if ( key==CODED && keyCode == ESC ) exit();
   //
-  //Prototype Key Board Quit Button OR shortcut
-  if ( key=='Q' || key=='q' ) exit();
-  if ( keyCode == ESC ) exit();
-  //
-} //End keyPressed
+} //End KeyPressed
 //
 void mousePressed()
 {
@@ -48,3 +49,4 @@ void mousePressed()
 } //End mousePressed
 //
 //End Main Program
+//

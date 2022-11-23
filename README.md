@@ -77,4 +77,31 @@ Introduce Modular
 
 See lessons folder and numerical organization
 
+Algorithms not explored here
+- Display
+- Orientation
+- Night Mode (but aware that purple has blue in it, yellow does not)
+
+Algorithms Explored
+- OS Start
+- User Start
+- Quit Keyboard prototyping and shortcut
+- Hover over
+
+Rect
+- layout from middle of the screen (or corner), better layout practice from middle
+- local variables are garbage collected after block of code run
+
+Button Creation
+- mouseX & MouseY (see println & middle values)
+- using equalities to create logical rectangle (mimics Google's previous programming of circle-display and rectangle-hover-over & rectangle-click)
+
+Subprogram organization
+- difference between MAIN and Blocks of Code
+- subprograms referenced to MAIN and Boilerplate (what needs to be in MAIN)
+- NOTE: single lines of code can be referenced in subprogram instead of rewriting them
+
+Demonstration
+- Code Library Example / QuitButton_Dynamic
+
 ---

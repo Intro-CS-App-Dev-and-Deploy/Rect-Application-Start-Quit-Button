@@ -2,55 +2,58 @@
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+color quitButtonColour, yellow=#FFFF00 , purple=#FF00FF ;
 //
 void setup()
 {
-  //Display & Orientation Algorithms not consider yet
-  size(400, 300); //Landscape
+  //Display & ALgorithms not considered yet
+  size (400, 300); //Landscape
   //fullScreen(); //displayWidth, displayHeight
-  appWidth = width;
+  appWidth = width; 
   appHeight = height;
   //
   //Population
-  float centerX = appWidth * 1/2;
-  float centerY = appHeight * 1/2;
+  float centerX = appWidth * 1/2; //Point
+  float centerY = appHeight * 1/2; //Point
   quitButtonX = centerX - ( appWidth * 1/4 );
   quitButtonY = centerY - ( appHeight * 1/4 );
-  quitButtonWidth = appWidth * 1/2; //could be centerX, but that is a point
-  quitButtonHeight = appHeight * 1/2; //same comment as centerX, point not line
+  quitButtonWidth = appWidth * 1/2; //Line not point, thus use formula
+  quitButtonHeight = appHeight * 1/2; //Line not point, thus use formula
 } //End setup
 //
-void draw ()
+void draw()
 {
-  if ( noNowReallyStart==true ) {
+  if ( noNowReallyStart==true ) { //Actual start IF
     background(0); //Night Mode not considered yet
     //
-    //Hover Over Feature
-    println("X-value", quitButtonX, mouseX ,quitButtonX+quitButtonWidth );
-    println("Y-value", quitButtonY, mouseY ,quitButtonY+quitButtonHeight ); 
-    /*
-    if () {
-      quitButtonColour = yellow;
-    } else {
-      quitButtonColour = purple;
-    } //End Quit Button Colour
+    //Logical Rectangle
+    println("X-Value", quitButtonX, mouseX, quitButtonX+quitButtonWidth );
+    println("Y-Value", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
     //
-    fill(quitButtonColour); 
-    */
-    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button with Hoverover
-  }
+    //Quit Button Hover Over Feature
+    if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+      quitButtonColour = yellow; //Remember Knight Mode
+      //HINT: QuitButtonWorks Boolean here, if true, would only work if the mouse hovered over the logical rectangle
+    } else {
+      quitButtonColour = purple; //Remember Day Mode
+    } //End Hover Over
+    //
+    fill(quitButtonColour);
+    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button
+  } //End IF-STart
+  //
 } //End draw
 //
-void keyPressed ()
+void keyPressed()
 {
-  //Post-OS Level Start Button
-  if ( key==' ' && start==true) noNowReallyStart = true;
   //
-  //Prototype Key Board Quit Button OR Shortcut
-  if ( key=='Q' || key=='q') exit() ;
-  if ( key==CODED && keyCode == ESC ) exit();
+  if ( key==' ' && start==true ) noNowReallyStart = true;
   //
-} //End KeyPressed
+  //Prototype Key Board Quit Button OR shortcut
+  if ( key=='Q' || key=='q' ) exit();
+  if ( keyCode == ESC ) exit();
+  //
+} //End keyPressed
 //
 void mousePressed()
 {
@@ -59,7 +62,9 @@ void mousePressed()
   start = true;
   println("To Start, Press the Space Bar");
   //
+  //Quit Button: Logical Rectangle, see println in draw()
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
+  //
 } //End mousePressed
 //
 //End Main Program
-//

@@ -78,7 +78,9 @@ Advanced Applications
 
 # To Include
 
-Introduce Modular
+Introduce Modular Programming
+
+If both START Buttons and QUIT BUtton are in own subprogram with multiple VOIDs, then Code Library Possible to integrate with MAIN Program
 
 See lessons folder and numerical organization
 
@@ -88,10 +90,11 @@ Algorithms not explored here
 - Night Mode (but aware that purple has blue in it, yellow does not)
 
 Algorithms Explored
-- OS Start
-- User Start
+- OS Start & all other variables turned off (unless hover-over active)
+- User Start & Splash Screen
 - Quit Keyboard prototyping and shortcut
 - Hover over
+- Quit Button with Boolean activated only in hover over (students need to add this part for >65%)
 
 Rect - 04
 - layout from middle of the screen (or corner), better layout practice from middle

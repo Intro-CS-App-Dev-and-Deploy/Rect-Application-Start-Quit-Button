@@ -1,5 +1,10 @@
-# Rect-Application-Quit-Button
+# Rect-Application-Start-Quit-Button
 Introductory CS Code that can be copied to any program
+
+Purpose:
+- create OS level Start Button, with instructions (Mouse Click to activate WINDOW)
+- Create User Level Splash Screen (SPACE Bar to begin program)
+- Create Mouse-based Quit Button & associated Key Board Short Cuts (also to prototype features)
 
 **CAUTION**: High School will probably be the last place you work on code you have started from a blank program
 

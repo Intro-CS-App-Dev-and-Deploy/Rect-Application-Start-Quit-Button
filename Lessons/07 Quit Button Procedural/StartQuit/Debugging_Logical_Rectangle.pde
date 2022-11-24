@@ -1,4 +1,4 @@
-void debuggingLogicalRectangle() {
-  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth );
-  println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight ); 
-}//End debuggingLogicalRectangle
+void debugLogicalRect() {
+  println("X-Value", quitButtonX, mouseX, quitButtonX+quitButtonWidth );
+  println("Y-Value", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
+}//End debugLogicalRect

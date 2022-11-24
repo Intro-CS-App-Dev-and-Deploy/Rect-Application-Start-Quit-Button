@@ -1,3 +1,3 @@
 void displayOrientation() {
-  //Display & Orientation Algorithms not consider yet
-}//End displayOrientation 
+  //Display & Orientation Algorithms not considered yet
+}//End displayOrientation

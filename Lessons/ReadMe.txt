@@ -4,3 +4,7 @@ Coded bugs to be fixed
   Computer can still see the logical rectangle, needs to be fixed by a Boolean
 - See Note in 06 Quit Button Hover Over
 
+
+
+
+Future Note: take the lessons out create integration with ReadMe.md

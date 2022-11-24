@@ -1,7 +1,7 @@
 # Rect-Application-Start-Quit-Button
 Introductory CS Code that can be copied to any program
 
-Purpose:
+Purpose: creates start and quit buttons for all future assignments 
 - create OS level Start Button, with instructions (Mouse Click to activate WINDOW)
 - Create User Level Splash Screen (SPACE Bar to begin program)
 - Create Mouse-based Quit Button & associated Key Board Short Cuts (also to prototype features)

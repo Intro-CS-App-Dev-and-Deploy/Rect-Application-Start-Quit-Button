@@ -1,6 +1,6 @@
 Boolean start=false, noNowReallyStart=false;
 //
-void OS_Start() {
+void OS_Start() { //See keyPressed()
   //OS Level Start Button
   start = true;
   println("To Start, Press the Space Bar");

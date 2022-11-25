@@ -1,8 +1,5 @@
 //Global Variables
 int appWidth, appHeight;
-Boolean start=false, noNowReallyStart=false;
-float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color quitButtonColour, yellow=#FFFF00, purple=#FF00FF ;
 //
 void setup()
 {
@@ -11,7 +8,7 @@ void setup()
   displayOrientation();
   appWidth = width; 
   appHeight = height;
-  population();
+  quitButtonPopulation();
 } //End setup
 //
 void draw()
@@ -23,20 +20,14 @@ void draw()
 //
 void keyPressed()
 {
-  //User Initiate Start Screen
-  if ( key==' ' && start==true ) noNowReallyStart = true;
-  //
+  splashScreenKeyBoard();
   keyBoardShortCuts();
-  //
 } //End keyPressed
 //
 void mousePressed()
 {
   OS_Start();
-  //
-  //Quit Button: Logical Rectangle, see println in draw()
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
-  //
+  quitButtonLogicalRectMousePressed();
 } //End mousePressed
 //
 //End Main Program

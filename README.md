@@ -6,12 +6,16 @@ Purpose: creates start and quit buttons for all future assignments
 - Create User Level Splash Screen (SPACE Bar to begin program)
 - Create Mouse-based Quit Button & associated Key Board Short Cuts (also to prototype features)
 
+Note: creating START, QUIT, and Key-Board Shortcut subprograms can become a code library. 
+- illustrates Modular Programming
+
 **CAUTION**: High School will probably be the last place you work on code you have started from a blank program
 
 ## Introductory Visuals
 Again, use your mouse and hover over various button in Chrome, then click them
 - Notice the hover over works but the click will work when the hover over doesn't
-- This is called button code using inequalities (previously seen in Measles with random in the first rectangle)
+- This is called button code using inequalities
+- Notice the space of the button (mouse click) is only active during hover over
 
 ## Questions
 - How do you prototype behaviours and responses of programs as they interact with a human user?
@@ -22,6 +26,7 @@ Again, use your mouse and hover over various button in Chrome, then click them
 - Fill the rectangle with a colour and reset with white afterwards
 - Simple IF for key board listener (see Processing.org / Reference for other key board options)
 - Simple IF for mouse listener (see Processing.org / Reference for other mouse options)
+- Use Booleans to communicate meaning
 
 View the Location of the Mouse Pointer
 - in `draw()`, `println(mouseX, mouseY)`
@@ -30,6 +35,18 @@ View the Location of the Mouse Pointer
 Advanced & Enrichment: See Code Library Example / QuitButton_Dynamic.pde
 - Code a Quit Button to the Corner of the screen that can be copied to all future programs
 - Requires use of Main Program and Sub Programs, with references to main program
+
+## Algorithms Explored Here
+- User Start & Splash Screen Algorithms deactivating all other coding (multiple levels of an experience)
+- OS Start & all other variables turned off (unless hover-over active)
+- Quit Keyboard prototyping and shortcut
+- Hover over
+- Quit Button with Boolean activated only in hover over (students need to add this part for >65%)
+
+#### Previous Algorithms not explored here
+- Display
+- Orientation
+- Night Mode (but aware that purple has blue in it, yellow does not)
 
 ## Instructions, Vocabulary, & Explanations (Including URLs and IDE Use)
 - Once the basic program is outlined with a rectangle in the center
@@ -45,9 +62,13 @@ Advanced & Enrichment: See Code Library Example / QuitButton_Dynamic.pde
 - setup
   - Display Geometry
   - Variable Population
+  - Local variables garbage collected at the end of the setup() block
 - draw
 - keyPressed
-- mousePressed
+- mousePressed & mouseX-mouseY key variables (and using println to debug)
+- creating logical rectangles for mouse interactions
+  - using inequalities to create logical rectangle (mimics Google's previous programming of circle-display and rectangle-hover-over & rectangle-click)
+- Boolean Variables as small bits of communication
 
 ## Specific Functions and Parameters emphasized here
 - COLOR Variables: more memory than integer (`int` is only enough for gray scale)
@@ -65,46 +86,11 @@ Advanced Applications
 - Empty IF ELSE: when either code executes or nothing executes
 
 ## Gamification or Rubric or Points
-- [1] Hover over works
+- [1] Hover over works (logical rectangle bug on "first two screens" fixed)
 - [1] Mouse Interaction works
 - [1] Images or Text added into Quit Button (student choice)
 
 ## Additional Information to Answer Questions
-
-## Extensions
-- Add images or text into Quit Button
-
----
-
-# To Include
-
-Introduce Modular Programming
-
-If both START Buttons and QUIT BUtton are in own subprogram with multiple VOIDs, then Code Library Possible to integrate with MAIN Program
-
-See lessons folder and numerical organization
-
-Algorithms not explored here
-- Display
-- Orientation
-- Night Mode (but aware that purple has blue in it, yellow does not)
-
-Algorithms Explored
-- OS Start & all other variables turned off (unless hover-over active)
-- User Start & Splash Screen
-- Quit Keyboard prototyping and shortcut
-- Hover over
-- Quit Button with Boolean activated only in hover over (students need to add this part for >65%)
-
-Rect - 04
-- layout from middle of the screen (or corner), better layout practice from middle
-- local variables are garbage collected after block of code run
-- Bug: pressing the mouse continues to println which should be locked out with a single-line-IF
-
-Button Creation
-- mouseX & MouseY (see println & middle values)
-- println's must demosntrate logical rectangle before hover-over and mouseClick
-- using equalities to create logical rectangle (mimics Google's previous programming of circle-display and rectangle-hover-over & rectangle-click)
 
 Subprogram organization
 - difference between MAIN and Blocks of Code
@@ -113,6 +99,14 @@ Subprogram organization
 
 Demonstration
 - Code Library Example / QuitButton_Dynamic
-- is the other example the same?
+  - TEACHER QUESTION: are these programs the same
+
+## Extensions
+- Add images or text into Quit Button
+
+---
+
+# To Include
+
 
 ---
